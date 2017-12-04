@@ -1,56 +1,33 @@
-# blog
+# blogpuls
+===================
 
-> A Vue.js project
+实现一个简单的blog
 
-## Build Setup
+----------
 
-``` bash
-# install dependencies
-npm install
 
-# serve with hot reload at localhost:8080
-npm run dev
+1.启动数据库mongod
+	Ps：为了玩docker，就用了下docker
+	在docker上安装mongo看 http://www.jianshu.com/p/43f6c29d2cd8
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
-
-1.mongod运行
- 直接在mondodb下运行 mongod.exe;
- 在运行momgo.exe;
-use blog;定义新的数据库名
-show dbs； 还没真正建立起来，只是在使用
-db.users.save({name:"nana",password:'123456'})  定义一个collection,名为“users”,然后插入数据
+	# 进入mongo容器，其中‘mongo-server'是mongo容器别名
+	docker exec -it mongo-server bash
+	# 启动mongo服务
+	mongod 
 
 
 
-db.User.findOne({name: req.body.name}, function(err, doc){ User})
-
-
-
-
-2.node服务开启
+2.后台（node）服务开启
 node app
 
-3.vue 执行  在blog下
+3.前端（vue）服务启动
   npm run dev
 
 
-4,vue使用axios post传data时json数据格式问题
+Documents
+-------------
+
+vue使用axios post传data时json数据格式问题
 
 var params = new URLSearchParams();
 params.append('param1', 'value1');
