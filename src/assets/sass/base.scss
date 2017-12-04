@@ -1,0 +1,135 @@
+html,body{
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 100%;
+}
+ul,li{
+  list-style: none;
+}
+
+
+.centerbox{
+  padding-left:260px;
+  position: relative;
+  height: 100%;
+}
+
+p{
+  margin:0;
+}
+
+
+#main{
+  min-height:100%;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #ebeff6;
+  text-align: left;
+  padding:20px;
+  padding-top:90px;
+  box-sizing: border-box;
+  padding-bottom: 60px;
+}
+
+#main h5{
+  font-size:24px;
+  color:#54667a;
+  font-weight: normal;
+  margin-bottom:10px;
+}
+.el-breadcrumb__item__inner{
+  font-size:14px ;
+  color:#a6afbb
+}
+em,i{
+  font-style: normal;
+}
+*{
+  margin:0;
+  padding:0;
+}
+
+.loading{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #fff;
+  img{
+    display: block;
+    margin:500px auto;
+  }
+}
+
+/*弹层*/
+.layer_box{
+  width: 100%;
+  height:100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  z-index:10;
+  top: 0;
+  left:0;
+  .layer{
+    width: 420px;
+
+    position: absolute;
+    left:50%;
+    margin-left:-210px;
+    top:200px;
+    border-radius:4px;
+    z-index:15;
+    background-color: #fff;
+    .title{
+      height: 60px;
+      padding-left:30px;
+      background-color: #ebeff6;
+      font-size: 18px;
+      line-height:60px;
+      color:#54667a;
+      em{
+        /*background: url("../del_icon.png") no-repeat;*/
+        float: right;
+        display: block;
+        width: 50px;
+        height: 60px;
+        padding:20px;
+        box-sizing: border-box;
+        background-position: center;
+        cursor: pointer;
+      }
+    }
+    .layer_center{
+      padding:40px;
+      box-sizing: border-box;
+      h5{
+        font-size: 16px;
+        color:#54667a;
+        /*background:url("../gantan_icon.png") no-repeat;*/
+        background-position: 2px;
+        padding-left:45px;
+        font-weight: normal;
+        margin-bottom:30px;
+      }
+      .el-form-item{
+        margin:30px 0 ;
+      }
+      .el-button{
+        width: 150px;
+        height: 40px;
+        font-size: 14px;
+        &:first-child{
+          background-color: #ebeff6;
+          color:#54667a;
+        }
+        &:last-child{
+          margin-left:35px;
+        }
+      }
+    }
+  }
+}
+
